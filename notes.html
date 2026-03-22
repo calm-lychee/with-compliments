@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>With Compliments</title>
+<style>
+  /* Base */
+  html, body { margin: 0; }
+  body {
+    background-color: #f5f5b8;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 12pt;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  /* Header */
+  #header {
+    text-align: center;
+    white-space: pre;
+    margin: calc(50vh - 0.5em) 0 20px 0;
+  }
+
+  /* Dropdown */
+  #postcode { position: relative; cursor: default; }
+  #dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgb(250, 204, 182);
+    padding: 4px 0;
+    box-sizing: border-box;
+    z-index: 10;
+  }
+  #postcode:hover #dropdown { display: block; }
+  #dropdown a {
+    display: block;
+    padding: 3px 6px;
+    color: #651300;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  #dropdown a:hover { color: #202d85; }
+
+  /* Text box */
+  #textbox { text-align: justify; margin: 0 0 40px 0; }
+  #textbox p { margin: 0; }
+  .attribution { margin-top: 12px; }
+
+  /* Back link */
+  .back { margin-top: 12px; }
+  .back a { color: #651300; text-decoration: none; }
+  .back a:hover { color: #202d85; }
+</style>
+</head>
+<body>
+
+<div id="header">With Compliments    <span id="postcode">SW1V 3AT<div id="dropdown"><a href="notes.html">Notes</a><a href="future.html">Future</a><a href="past.html">Past</a><a href="news.html">News</a><a href="mailto:mail@with-compliments.net">Email</a></div></span></div>
+
+<div id="textbox">
+  <p>&ldquo;In response to your questions about alternative spaces, I don&rsquo;t know that there are any real ones. It seems to me that what is needed is: (1) an alternative economic set-up in which artists are not promoted then exploited by those who may have major investment interests at stake (and this may include not only galleries, but dealers, critics, and the artists themselves as well); (2) an alternative set of aesthetic criteria that makes it <em>impossible</em> to conclude that a piece of art is good on the basis of how famous the artist is or how important a gallery he or she belongs to. These seem to require an alternative social and economic system in general. But I don&rsquo;t think coop galleries formed for the express purpose of making it easier for more artists to gain entry into that very system which perpetuates the exploitation of artists in general is an alternative; it&rsquo;s just more of the same.&rdquo;</p>
+  <br>
+  <p class="attribution">Adrian Piper, <em>Studio International</em> (Volume 195 Number 990)</p>
+  <br>
+  <p class="back"><a href="index.html">Back</a></p>
+</div>
+
+<script>
+  function matchWidth() {
+    var h = document.getElementById('header');
+    document.getElementById('textbox').style.width = h.offsetWidth + 'px';
+  }
+  window.addEventListener('load', matchWidth);
+  window.addEventListener('resize', matchWidth);
+</script>
+</body>
+</html>
